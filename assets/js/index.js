@@ -9,7 +9,7 @@ $(function () {
             // 确定就把秘钥删除掉
             localStorage.removeItem('token')
             // 然后跳转页面
-            location.href='/login.html'
+            location.href = '/login.html'
             layer.close(index);
         });
     })
@@ -21,7 +21,7 @@ function gitUserInof() {
     $.ajax({
         url: '/my/userinfo',
         success: function (res) {
-            console.log(res);
+            // console.log(res);
             // 判断状态获取
             if (res.status !== 0) {
                 return layui.layer.msg(res.massage)
