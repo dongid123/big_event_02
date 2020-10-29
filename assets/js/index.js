@@ -1,5 +1,18 @@
 $(function () {
     gitUserInof()
+
+    var layer = layui.layer
+    //给退出按钮绑定退出的功能
+    $('#btnReset').on('click', function () {
+        layer.confirm('确定要退出登录吗?', { icon: 3, title: '提示' }, function (index) {
+            //do something
+            // 确定就把秘钥删除掉
+            localStorage.removeItem('token')
+            // 然后跳转页面
+            location.href='/login.html'
+            layer.close(index);
+        });
+    })
 })
 
 // 封装一个全局函数
