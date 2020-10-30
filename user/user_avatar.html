@@ -40,8 +40,9 @@
 
             <!-- 第二行的按钮区域 -->
             <div class="row2">
-                <button type="button" class="layui-btn">上传</button>
-                <button type="button" class="layui-btn layui-btn-danger">确定</button>
+                <input type="file" id="file">
+                <button id="btnAdd" type="button" class="layui-btn">上传</button>
+                <button id="btnAddImags" type="button" class="layui-btn layui-btn-danger">确定</button>
             </div>
         </div>
     </div>
@@ -51,6 +52,8 @@
     <script src="/assets/lib/jquery.js"></script>
     <script src="/assets/lib/cropper/Cropper.js"></script>
     <script src="/assets/lib/cropper/jquery-cropper.js"></script>
+    <!-- 引入baseIPA文件 -->
+    <script src="/assets/js/bseaAPI.js"></script>
     <!-- 引入自己文件 -->
     <script src="/assets/js/user/user.avatar.js"></script>
 </body>
